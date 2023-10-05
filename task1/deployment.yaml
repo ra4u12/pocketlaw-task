@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task1-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: task1
+  template:
+    metadata:
+      labels:
+        app: task1
+    spec:
+      containers:
+      - name: task1
+        image: ra4u12/task1:v1
+        command: ["600"]
+        ports:
+        - containerPort: 80
