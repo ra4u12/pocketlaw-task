@@ -1,6 +1,6 @@
 module "eks_monitoring_logging" {
     
-    source = "./modules/terraform-aws-eks-monitoring-logging"
+    source = "./modules/aws-eks-monitoring-logging"
     
     cluster_name      = local.name
     aws_region        = local.region
